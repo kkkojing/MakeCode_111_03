@@ -2,13 +2,17 @@ namespace SpriteKind {
     export const Tree = SpriteKind.create()
     export const Water = SpriteKind.create()
     export const Fire = SpriteKind.create()
+    export const TwoSky = SpriteKind.create()
+    export const trash = SpriteKind.create()
+    export const Fish = SpriteKind.create()
+    export const Wall = SpriteKind.create()
+    export const Three_background = SpriteKind.create()
+    export const sea = SpriteKind.create()
+    export const Three_finish = SpriteKind.create()
+    export const Three_Coins = SpriteKind.create()
 }
 function levelThree () {
-	
-}
-function level_one () {
-    info.setScore(0)
-    scene.setBackgroundColor(9)
+    scene.setBackgroundColor(13)
     scene.setBackgroundImage(img`
         ................................................................................................................................................................
         ................................................................................................................................................................
@@ -19,118 +23,144 @@ function level_one () {
         ................................................................................................................................................................
         ................................................................................................................................................................
         ................................................................................................................................................................
-        ................bbbbbbbbb.......................................................................................................................................
-        .........bbbbbbbbbbbbbbbbbbb....................................................................................................................................
-        ....bbbbbbbbeebbbeeeebbbbbbbbbbbbbbbbbbbbbbbb...................................................................................................................
-        .eeebbbbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbb................................................................................................................
-        bbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbeebbbbbbbb..........................................................................................................
-        ebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbb.....................................................................................................
-        ebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbeeebbbbbbbbbb...............................................................................................
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbb...........................................................................................
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbb..................................................................................bbb
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbb.............................................bbbbbbbbbbbb.....................bbbe
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbb..................................bbbbbbbbbbbbbbbbbbb..........bbbbbbbbbee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebbbbbbbbbbbbbbbbbbbbbbbeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbeebbbbbeeeebbbbbeebbbbbbbbbbbbbbeeeeebbbbeeeebbbbbbbbbbbbbbbbeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbeeebeeeeeeeeeeeeebeeeeeeeebeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        ..................1111111.......................................................................................................................................
+        ...............111111111111111..................................................................................................................................
+        ..............111111111111111111111.............................................................................................................................
+        ..............111111111111111111111.......................................111...................................................................................
+        ...............11111111111111111111..................................11111111111................................................................................
+        .................11111111111111111................................11111111111111111111111....................................111111111..........................
+        .....................11111111111..................................111111111111111111111111.............................1111111111111111111......................
+        ..................................................................111111111111111111111111............................111111111111111111111.....................
+        ..................................................................111111111111111111111111...........................1111111111111111111111.....................
+        ..................................................................111111111111111111111..............................1111111111111111111111.....................
+        ....................................................................11111111111111....................................11111111111111111111......................
+        .........................................................................................................................11111111111111.........................
+        ..........................1.....................................................................................................................................
+        ...................................................1............................................................................................................
+        ................................................................................................................................................................
+        .........................................................................1....................................1.................................................
+        ................................................................................................................................................................
+        ...........................................1...................................................................................1................................
+        ...............................................................................................................................................1................
+        ..........1.....................................................................................................................................................
+        .........................1......................................................................................................................................
+        ........................................................................................1.......................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ...................................................1............................................................................................................
+        ................................................................................................................................................................
+        ....................................1..........................1................................................................................................
+        ................................................................................1.......................................................1.......................
+        ......................6.........................................................................................................................................
+        .....................66.........................................................................................................................................
+        .....................66........................................................................................1................................................
+        .....................666.........................................................................1..............................................................
+        ....................6666........................................................................................................................................
+        ..........1.........66666.......................................................................................................................................
+        ...................666666...................................1.....................................66............................................................
+        ...................6666666........................................................................66............................................................
+        ..................666666666......................................................................666...............................................1............
+        .................6666666666.....................................................................6666........................1...................................
+        .................66666666666....................................................................66666...........................................................
+        ................666666666666.................................................1.................666666...........................................................
+        ................6666666666666................1................................................66666666.............................66...........................
+        ...............666666666666666...............................66..............................6666666666...........................666...........................
+        .............666666666666666666............................66666............................66666666666.........................666666..........................
+        ............66666666666666666666.........................6666666...........................6666666666666.......................66666666.........................
+        ...........6666666666666666666666......................6666666666........................6666666666666666....................66666666666........................
+        ..........6666666666666666666666666................6.6666666666666......................666666666666666666.................66666666666666.......................
+        ........6666666666666666666666666666..............66666666666666666....................666666666666666666666............666666666666666666..............1.......
+        ......66666666666666666666666666666666666....66666666666666666666666.................6666666666666666666666666666666666666666666666666666666....................
+        ...666666666666666666666666666666666666666666666666666666666666666666..............666666666666666666666666666666666666666666666666666666666666............66...
+        66666666666666666666666666666666666666666666666666666666666666666666666..........66666666666666666666666666666666666666666666666666666666666666666666666666666..
+        666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666.
+        6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666666666699666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666666699996966666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666669999999999666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666666996996999999996666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666696999699969969969966666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666666999999999999999999996666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666666699699999699999999999969966666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6666699999999999699969999996999999966666666666666669999996666666666666666666699696666666666666666666666666666666666666666666666666666666666666666666666666666666
+        6999999966999999999999999999699699999999966666999996999996666666666666666666999999666666666666666666666666666666666666666666666666666666666666666666666666666666
+        9699699999669999999999999999999999699999969999999699969999996666666666666969999699996666666666666666666666699999966666666666666666666666666999999966666666666666
+        9999999999999999999999999999999999999699969999969999969999969696666666666699699999969966666666666666666666999999699666666666666666666666699999996999666666666666
+        9969999999999999999999999999999999999999969999999999999999999999999666699999999999999999666666666666666999999999999969666666666666666669999969999999999666666666
+        9999999999999969966669999699999999999999999999999999999999999999999999996969999999999999996666666666999999999999999996999666666666666699996999999999969999666666
+        999999699999999666666699999999999999999999d999699999999999999999969999999999996999999999999999999999999999699699999999999999666666669999999996999999999999999999
+        6999999999999966666666699999999d99999999999966669999999999999999999999999999999999996999999999996999999999996999996969999696999999999999999999999996999969999969
+        999999999999666666666666699d9999999999999966666666999969999999969999999999999999999969999999d9999999999999999999999999969996999699999999996999699996999999996999
+        9999999999966666666666666666699999999999666666666699999999999999999999999999999999999999999999996999999996999999699999999999999999996999999999999969999999999999
+        9999999996666666666666666666666666666666666666666669999999999999999999999999999999999d99969999999999999699999999999999999999999999999999999999999999999699999996
+        99999996666666666666666666666666666666666666666666666999999999d999999d999d99999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+        9999666666666666666666666666666666666666666666666666666699999999999999999999999d99999999999999999999999999999999999999999999999999999969999999999999d99999999999
+        9666666666666666666666666666666666666666666666666666666666669999999999999999999999999999999999999d99999999999999999999999999999999999999999999999999999999999999
+        6666666666666666666666666666666666666666666666666666666666666666666669999999999999999999999999999999999999d9999999999999d999999999969999999999999999999999999999
+        66666666666666666666666666666666666666666666666666666666666666666666699999999999999d9999999999999999999999999999999999999999999999999999999999d99999999999999999
+        966666666666666666666666666666666666666666666666666666666666999999999999d999999999999999969999999999999999999999999999999999999999999999999999999999999999999999
+        999999666666666666666666666666666666666666666666669999699999999999999999999999999999999999999999999999999999999d999999999999999999999999999999999999999999999999
+        999999d999999966666666666666666666666666666669999999999999999999999999999999999969999999999999999999999999999999999999999999999999999999999999999999999999999999
+        99d999999999999999999999999999999999999999999999999999999999999d99999999999999999999999999999966999d999999999969999999999999666999999999999999999999999999999999
+        99999999999d99999999999999999999d999999999999999d999999999999999999999999999999999999999999966669999999999999999999999d99966666999999999999d99999999999999d99999
+        999999999999999999999999999d999999999999999999999999999999999999999999999999999999999999996666666999999999999999999999996666666699999999999999999999999999999999
+        9999999999999999999999999999999999999999999999999999999999999999999999d9999999999999999966666666666999999d999999999996666666666669d999999999999999d9999999999999
+        999999d99999999d9999999d99999999999999999999999999999999d999999999999999999999d9999999666666666666666699999999999666666666666666669999999999d9999999999999999999
+        9d999999999999999996999999999999999999999999999999999999999999999999999999999999996666666666666666666666666666666666666666666666666999999999999999999999996d9999
+        9999999999999999999999999999999999999999999d99999999999999999999999999999999999666666666666666666666666666666666666666666666666666666999999999999999999966699999
+        999999999999999999999d9999999999999999d9999999999999999999999999999999999996666666666666666666666666666666666666666666666666666666666666d99999999999666666669999
+        999999d9999d999999999999999999999d99999999999999999999999999999999d999996666666666666666666666666666666666666666666666666666666666666666666666666666666666666999
+        9999999999999999d99999999999d99999999999999999999999999999999999999999999999666666666666666666666666666666666666666666666666666666666666666666666666666666666999
+        9999999999999999999999d99999999999999999999999999999999999999999999999999999999999996666666666666666666666666666666666666666666666666666666666666666666666666699
+        99999999999999999999999999999999999999999999999999d999999d9999999999999999999999999999d9999996666666666666666666666666666666666666666666666666666666666666666669
+        9999d999999d999999999999d999999d99999999999999999999999999999999999999999999999999999999999999999999966666666666999999996666666666666666666666666666666666666666
+        99999999999999999999999999999999999d99999999d999999999999999999999999999999999d9999999999999999d9999999999999999999999999996666666666666666666666666666666666666
+        99999999999999999d999999999999999999999999999999999999999999999999d9999999999999999999999999999999999999999999999d9999999999996666666666666666666666666666666666
+        9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999996666666666666666666666666666
+        99d99999d99999999999999999999999999999999999999999999999999d99999999999999999999999d9999999999999999999999999999999999999999999999999d99996666666666666666666666
+        99999999999999999999d9999999d999999999999999d99999999999999999999999999999999999999999999d9999999999999999999999999999999999999999999999999999999999999999999999
+        99999999999d99999999999999999999999999999999999999999d99999999999999999999d9999999999999999999999999999d9999999999999999999999999999999999999999999d9999999d9999
+        99999d99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999d999999999d999999999999999999999999
+        999999999999999999888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999999999d999999999999999999999999999999999999999999999
+        9999999999888888888888888888888899999999999999999999999999999999888888888888888899999999999999999999999999999999999999999999999999999999999999999999999999999999
+        9999999888888888888888888888888888888888888888888888888888888888888888888888888888888899999999999999999999999888888888888888888899999999999999999999d99999999999
+        888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888999d999999999998888888888888888888888888888888888888888888889999999999
+        8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+        8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+        8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
+        8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888
         `)
+    info.setLife(1)
+    getPlayer = sprites.create(img`
+        . . . . 4 4 4 4 1 4 . . . . . . 
+        . . . 4 4 e e e e 4 4 . . . . . 
+        . . . 4 e e e e e e 1 . . . . . 
+        . . . 4 2 2 2 2 2 2 2 . . . . . 
+        . . . 2 2 d d f d f . . . . . . 
+        . . . e d d d d d d . . . . . . 
+        . . . e d d d d d . . . . . . . 
+        . . . . 4 e e e e 4 . . . . . . 
+        . . . 4 1 e e e e 1 4 . . . . . 
+        . . 4 1 e e e e 4 e 1 4 . . . . 
+        . . 4 2 e 4 e e e 4 e 4 . . . . 
+        . . 4 2 2 4 e e e 4 e 4 . . . . 
+        . . e 4 2 2 2 e e 4 e 4 . . . . 
+        . . . . 4 4 4 4 4 4 4 . . . . . 
+        . . . 2 e e 2 2 4 e 4 . . . . . 
+        . . . 2 e 4 . . 2 e 4 . . . . . 
+        `, SpriteKind.Player)
+    getPlayer.setVelocity(0, 300)
+    controller.moveSprite(getPlayer, 60, 0)
+    scene.cameraFollowSprite(getPlayer)
+    getPlayer.sayText("冰山融化 快逃到對面", 2000, false)
+    init_three()
+}
+function level_one () {
     getPlayer = sprites.create(img`
         ............................
         ............................
@@ -230,207 +260,888 @@ function level_one () {
     true
     )
     playerFace = 0
-    init()
-    info.startCountdown(90)
-}
-controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    getPlayer,
-    [img`
-        ...........4444114..........
-        ..........444444414.........
-        ..........4444444414........
-        .........44444444444........
-        .........55555555555........
-        ........4444444444444.......
-        ........44dfddfdddd.........
-        ..........dfddfdddd.........
-        ..........ddddddddd.........
-        ...........ddddddd..........
-        ...........22222222.........
-        ..........12222222222.......
-        .........122222222222.......
-        ........12222222221222......
-        ......dd22222222212222......
-        ....bbbd2222222dd22222......
-        ......bbbbbbbbbbd222........
-        ...........2222bbbbbb.......
-        ...........fffcffff.bb......
-        ...........22222222..b......
-        ...........22222222.bb......
-        ..........2222.2222bb.......
-        ..........2222.2222b........
-        ..........2222.2222.........
-        ..........2222.2222.........
-        ..........222...2222........
-        ..........222...2222........
-        .........ffff..fffff........
-        `,img`
-        ...........4444114..........
-        ..........444444414.........
-        ..........4444444414........
-        .........44444444444........
-        .........55555555555........
-        ........4444444444444.......
-        ........44dfddfdddd.........
-        ..........dfddfdddd.........
-        ..........ddddddddd.........
-        ...........ddddddd..........
-        ...........22222222.........
-        ..........1222222222........
-        .........122222222222.......
-        ........12222222221222......
-        ......dd22222222212222......
-        ....bbbd22222222122222......
-        ......bbbbbbb22dd222........
-        ...........2bbbdbbbbb.......
-        ...........fffcffff.bb......
-        ...........22222222..b......
-        ...........22222222.bb......
-        ..........2222.2222bb.......
-        ..........2222.2222b........
-        ..........222..2222.........
-        ..........2222..222.........
-        ..........2222..2222........
-        ...........222..2222........
-        ..........ffff.fffff........
-        `],
-    1000,
-    true
-    )
-    playerFace = 1
-})
-info.onCountdownEnd(function () {
-    getPlayer.startEffect(effects.spray, 500)
-    getPlayer.sayText("即將進入下一關!")
-    currentLevel = currentLevel + 1
-    totalScore = info.score()
+    init_one()
+    info.startCountdown(40)
     info.setScore(0)
-    pause(2000)
-    newLevel()
-})
-function init () {
-    tiles.setCurrentTilemap(tilemap`層級2`)
-    treeList = tiles.getTilesByType(sprites.castle.tileGrass2)
-    for (let value of tiles.getTilesByType(sprites.castle.tileGrass2)) {
-        tree_icon = sprites.create(img`
-            .....77777..........
-            ..777777177.........
-            .77774777717........
-            7777774777447.......
-            77447477444717......
-            7774477774777.......
-            .77744774444771.....
-            .7774447447777......
-            ..777744477776......
-            ..77.77447766.......
-            ......44466.........
-            ......4444..........
-            ......4444..........
-            ......4444..........
-            .....44444..........
-            .....44444..........
-            .....4444...........
-            ....44444...........
-            ....44444...........
-            .....44444..........
-            `, SpriteKind.Tree)
-        tiles.placeOnTile(tree_icon, value)
+    scene.setBackgroundColor(9)
+    scene.setBackgroundImage(img`
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................................................................................................................................................................
+        ................bbbbbbbbb.......................................................................................................................................
+        .........bbbbbbbbbbbbbbbbbbb....................................................................................................................................
+        ....bbbbbbbbeebbbeeeebbbbbbbbbbbbbbbbbbbbbbbb...................................................................................................................
+        .eeebbbbbbbeeeeeeeeeeeeeeeeeeeeeeeebeeeebbbbbbbb................................................................................................................
+        bbbbbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbeebbbbbbbb..........................................................................................................
+        ebbeeeeeeeeeeeeeeeeeeeebbeeeeeeeeeeeeeeebeeeeeeeeebbbbbbbbb.....................................................................................................
+        ebeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbeeeeebeeeeeeeeeebbeeebbbbbbbbbb...............................................................................................
+        eeeeeeeeeebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbb...........................................................................................
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebebeeeeeeeeeeebbbbbbb..................................................................................bbb
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbeeeeeeeeeeeeeeeebeeeeeeeebeeebbbb.............................................bbbbbbbbbbbb.....................bbbe
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbbbbbbb..................................bbbbbbbbbbbbbbbbbbb..........bbbbbbbbbee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeeebeeeeeeebbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbeebbbbbbbbbbbbbbbbbbbbbbbeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbbeebbbbbeeeebbbbbeebbbbbbbbbbbbbbebeeebbbbeeeebbbbbbbbbbbbbbbbeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeebeeeeeeeeeeeeeeeeeeeeebbbeeebeeeeeebeeeeeebeeeeeeeebeeeeeeeeeeeeeeeeeeeebe
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeeebebeeeebeeeebeeeeeeeeeeeeeeeebeeeeeeeeeeeeebeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebeeeeeeebeeeeeeeeeeebeeeeeeeeeeeeeeeebeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeebbeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+        `)
+    level_one_summonFire()
+    level_one_summonFire()
+    level_one_summonFire()
+    level_one_summonFire()
+}
+function level_three_win () {
+    totalScore += info.score()
+    game_over_win()
+}
+function init_three () {
+    tiles.setCurrentTilemap(tilemap`層級6`)
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖`)) {
+        three_icon = sprites.create(img`
+            e e e e e e d e e e e e e e e e 
+            e e e e e e e e e e e e e e e e 
+            e e d e e e e b e e e e e e d e 
+            e e e e e b e e e e e e e e e e 
+            e e e e e e e e e e e b e e e e 
+            e e b e e e e e e e e e e e e e 
+            e e e e e e d e e e e e e e e e 
+            e d e e e e e e b e e e b e e e 
+            e e e e e e e e e e e e e e e e 
+            e b e e e e e e e e e d e e e e 
+            e e e e d e e b e e e e e e e e 
+            e e e e e e e e e e e e e e d e 
+            e e e e e e e e e e e b e e e e 
+            b e e e b e e e e e e e e e e e 
+            e e e e e e e d e e e d e e e e 
+            e e e d e e e e e e e e e e d e 
+            `, SpriteKind.Three_background)
+        tiles.placeOnTile(three_icon, value)
+        tiles.setWallAt(value, true)
         tiles.setTileAt(value, assets.tile`transparency16`)
     }
-    for (let value of tiles.getTilesByType(sprites.castle.tilePath3)) {
-        tree_icon = sprites.create(img`
+    three_land_list = []
+    three_temp_list = tiles.getTilesByType(assets.tile`我的貼圖2`)
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖2`)) {
+        three_icon = sprites.create(img`
+            1 1 1 1 1 1 1 d 1 1 1 1 1 1 1 d 
+            1 d 1 1 1 1 1 1 1 1 1 d 1 1 1 1 
+            1 1 1 1 1 d 1 1 1 1 1 1 1 1 1 1 
+            1 1 e e 1 1 1 1 1 e e 1 1 e e 1 
+            e e e e e e 1 e e e e b 1 e e e 
+            e e b e e e e e e e e e e e e e 
+            e e e e e e d e e e e e e e e e 
+            e d e e e e e e b e e e b e e e 
+            e e e e e b e e e e e e e e e e 
+            e b e e e e e e e e e d e e e e 
+            e e e e d e e b e e e e e e e e 
+            e e e e e e e e e e e e e e d e 
+            e e d e e e e e e e e b e e e e 
+            b e e e b e e e e e e e e e e e 
+            e e e e e e e d e e e d e e e e 
+            e e e d e e e e e e e e e e d e 
+            `, SpriteKind.Three_background)
+        tiles.placeOnTile(three_icon, value)
+        three_land_list.push(three_icon)
+        tiles.setWallAt(value, true)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+    }
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖3`)) {
+        three_icon = sprites.create(img`
+            1 1 1 1 1 1 1 d 1 1 1 1 1 1 1 d 
+            1 d 1 1 1 1 1 1 1 1 1 d 1 1 1 1 
+            1 1 1 1 1 d 1 1 1 1 1 1 1 1 1 1 
+            1 1 e e 1 1 1 1 1 e e 1 1 e e 1 
+            e e e e e e 1 e e e e b 1 e e e 
+            e e b e e e e e e e e e e e e e 
+            e e e e e e d e e e e e e e e e 
+            e d e e e e e e b e e e b e e e 
+            e e e e e b e e e e e e e e e e 
+            e b e e e e e e e e e d e e e e 
+            e e e e d e e b e e e e e e e e 
+            e e e e e e e e e e e e e e d e 
+            e e d e e e e e e e e b e e e e 
+            b e e e b e e e e e e e e e e e 
+            e e e e e e e d e e e d e e e e 
+            e e e d e e e e e e e e e e d e 
+            `, SpriteKind.Three_background)
+        tiles.placeOnTile(three_icon, value)
+        tiles.setWallAt(value, true)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+    }
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖1`)) {
+        three_coins = sprites.create(img`
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            . . . . 6 6 . . . . . . 1 1 . . 
-            . . . . 1 7 6 . . . . 1 7 6 . . 
-            . . . 1 7 7 7 6 . . 1 7 7 6 . . 
-            . . 6 7 6 6 7 7 6 1 7 7 6 . . . 
-            . . 6 6 . . 6 7 6 7 7 6 . . . . 
-            . . . . . . 6 7 6 7 6 . . . . . 
-            . . . . . . 6 7 7 6 . . . . . . 
-            . . . . . . . 7 7 6 . . . . . . 
-            . . . . . . . 6 6 . . . . . . . 
             . . . . . . . . . . . . . . . . 
-            `, SpriteKind.Tree)
-        tiles.placeOnTile(tree_icon, value)
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.Three_Coins)
+        animation.runImageAnimation(
+        three_coins,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . f f f f f f . . . . . 
+            . . . . f 5 5 1 1 1 5 f . . . . 
+            . . . f 5 5 5 5 5 5 1 5 f . . . 
+            . . . f 5 5 5 5 5 5 5 1 f . . . 
+            . . . f 5 5 5 5 5 5 5 1 f . . . 
+            . . . f 5 5 5 5 5 5 5 1 5 . . . 
+            . . . f 5 5 5 5 5 5 5 1 f . . . 
+            . . . f 5 5 5 5 5 5 5 1 f . . . 
+            . . . f 5 5 5 5 5 5 5 5 f . . . 
+            . . . . f 5 5 5 5 5 5 f . . . . 
+            . . . . . f f f f f f . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . f f f f . . . . . . 
+            . . . . . f 5 5 1 5 f . . . . . 
+            . . . . f 5 5 5 5 1 5 f . . . . 
+            . . . . f 5 5 5 5 5 1 f . . . . 
+            . . . . f 5 5 5 5 5 1 5 . . . . 
+            . . . . f 5 5 5 5 5 1 f . . . . 
+            . . . . f 5 5 5 5 5 1 f . . . . 
+            . . . . f 5 5 5 5 5 5 f . . . . 
+            . . . . f 5 5 5 5 5 5 f . . . . 
+            . . . . . f 5 5 5 5 f . . . . . 
+            . . . . . . f f f f . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . f f . . . . . . . 
+            . . . . . . f 5 1 f . . . . . . 
+            . . . . . f 5 5 5 5 f . . . . . 
+            . . . . . f 5 5 5 1 f . . . . . 
+            . . . . . f 5 5 5 1 f . . . . . 
+            . . . . . f 5 5 5 1 5 . . . . . 
+            . . . . . f 5 5 5 1 f . . . . . 
+            . . . . . f 5 5 5 5 f . . . . . 
+            . . . . . f 5 5 5 5 f . . . . . 
+            . . . . . . f 5 5 f . . . . . . 
+            . . . . . . . f f . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        500,
+        true
+        )
+        tiles.placeOnTile(three_coins, value)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+    }
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖4`)) {
+        tiles.placeOnTile(getPlayer, value)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+    }
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖0`)) {
+        three_sea = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.sea)
+        animation.runImageAnimation(
+        three_sea,
+        [img`
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 6 6 6 
+            8 8 6 6 6 6 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 6 6 6 6 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 6 6 6 6 6 8 
+            8 8 6 6 6 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            `,img`
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 6 6 
+            8 8 6 6 6 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 6 6 6 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 6 6 6 6 8 
+            8 8 8 6 6 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 8 
+            `],
+        500,
+        true
+        )
+        tiles.placeOnTile(three_sea, value)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+    }
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖5`)) {
+        three_icon = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . 1 1 . . 1 1 1 . . . 1 1 1 . . 
+            1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+            `, SpriteKind.Three_finish)
+        tiles.placeOnTile(three_icon, value)
         tiles.setTileAt(value, assets.tile`transparency16`)
     }
 }
-controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    getPlayer,
-    [img`
-        ..........b.................
-        ..........b.................
-        .........bbb................
-        .........b444414............
-        .........44444414...........
-        ........444444441...........
-        .......b4444444444..........
-        ......d45444444441..........
-        ......2b4544445544..........
-        ......2bd4555544d...........
-        ......22224444222...........
-        ......222222222222..........
-        .......222222221222.........
-        .......b22222221222.........
-        ........b222222212..........
-        .........2222222............
-        .........2222222............
-        .........bff22ff............
-        ........bb2ffff2............
-        .......bb2222222............
-        ........b222.222............
-        .........222.2222...........
-        .........222.2222...........
-        .........222.2222...........
-        .........22f.2f22...........
-        .........fff.ffff...........
-        .........ff..ff.............
-        ............................
-        `,img`
-        ..........bb................
-        ..........bb................
-        .........bbb................
-        .........b444414............
-        .........44444414...........
-        ........444444441...........
-        ........4444444444..........
-        ......d45444444441..........
-        ......2b4544445544..........
-        ......2bd4555544d...........
-        ......22224444222...........
-        .......22222222222..........
-        .......222222221222.........
-        .......b22222221222.........
-        ........b222222212..........
-        .........22222222...........
-        .........2222222............
-        .........bff22ff............
-        ........bb2ffff2............
-        .......bb2222222............
-        ........b222.2222...........
-        .........222.2222...........
-        .........222.2222...........
-        .........222.2222...........
-        .........22f.2f22...........
-        .........fff.ffff...........
-        .........ff...fff...........
-        ............................
-        `],
-    1000,
-    true
-    )
-    playerFace = 0
+function init_two () {
+    tiles.setCurrentTilemap(tilemap`層級5`)
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖4`)) {
+        tiles.placeOnTile(getPlayer, value)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+    }
+    for (let value2 of tiles.getTilesByType(assets.tile`我的貼圖`)) {
+        two_icon = sprites.create(img`
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 6 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 6 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 6 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            `, SpriteKind.TwoSky)
+        tiles.placeOnTile(two_icon, value2)
+        tiles.setTileAt(value2, assets.tile`transparency16`)
+    }
+    for (let value3 of tiles.getTilesByType(assets.tile`我的貼圖0`)) {
+        two_icon = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 6 6 6 . . . . 6 6 6 6 . . . 
+            . . 6 6 6 6 . . . 6 6 6 6 . . . 
+            . . . 6 6 6 . . . 6 6 6 6 6 . . 
+            . . . . 6 6 . . . . 6 6 6 6 . . 
+            . . . . . . . . . . . 6 6 6 . . 
+            . . . . 6 6 6 6 . . . . . . . . 
+            . . . . 6 6 6 6 6 . . . . . . . 
+            . . . . 6 6 6 6 6 6 . . . . . . 
+            . . . . . 6 6 6 6 6 . . . . . . 
+            . . . . . 6 6 6 6 6 . . . . . . 
+            . . 6 . . . 6 6 6 . . . 6 6 . . 
+            . . . 6 . . . . . . . . 6 6 6 . 
+            . . . . . . . . . . . . . 6 6 . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.trash)
+        tiles.placeOnTile(two_icon, value3)
+        tiles.setTileAt(value3, assets.tile`transparency16`)
+    }
+    for (let value4 of tiles.getTilesByType(assets.tile`我的貼圖2`)) {
+        two_icon = sprites.create(img`
+            e e e e e e e b e e e e e e c e 
+            e e b e e e e e e e e e e c e c 
+            e e e c e e e e e e e e e e e e 
+            e e e e c e e e e e b e e e e b 
+            e e e e e e e c e e e e e e e e 
+            e e e e e e e e e e e e e e e e 
+            c e e e e e e b e e c e e e e e 
+            e e b e e e e e e c e e e e e e 
+            e e e e e e e e e e e b e e c e 
+            e e e e c e e e e e e e e e e c 
+            e e e e c e e e c e e e e e e e 
+            e e e e e e e e e e b e e e e e 
+            e e b e e e b e e e e e e e b e 
+            e e e e e e e e e e e e e e e e 
+            e c e e e e e e e c e e e e e e 
+            e e e e e b e e e e c e e e e e 
+            `, SpriteKind.Wall)
+        tiles.placeOnTile(two_icon, value4)
+        tiles.setWallAt(value4, true)
+        tiles.setTileAt(value4, assets.tile`transparency16`)
+    }
+    for (let value5 of tiles.getTilesByType(assets.tile`我的貼圖1`)) {
+        two_fish_icon = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . f 3 3 3 . . . 
+            . . . . . . . . . 3 3 3 3 3 . . 
+            . . . 3 3 f . . . . . . . . . . 
+            . . 3 3 3 3 3 . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . f 3 3 . . . . . 
+            . . . . . . . 3 3 3 3 3 . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . 3 3 f . . . . . . . . . . 
+            . . 3 3 3 3 3 . . . . . . . . . 
+            . . . . . . . . . . . f 3 . . . 
+            . . . . . . . . . . . 3 3 3 . . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.Fish)
+        animation.runImageAnimation(
+        two_fish_icon,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . 3 3 f . . . . . . . . . . 
+            . . 3 3 3 3 3 . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . f 3 3 3 . . . . 
+            . . . . . . . . 3 3 3 3 3 . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 3 3 f . . . . . . . . . . . 
+            . 3 3 3 3 . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . f 3 3 . . . 
+            . . . . . . . . . 3 3 3 3 3 . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . 3 3 f . . . . . . . . . 
+            . . . 3 3 3 3 3 . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . f 3 3 3 . . . . . 
+            . . . . . . . 3 3 3 3 3 . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 3 3 f . . . . . . . . . . . 
+            . 3 3 3 3 3 . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . f 3 3 . . . . 
+            . . . . . . . . 3 3 3 3 3 . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        1000,
+        true
+        )
+        tiles.placeOnTile(two_fish_icon, value5)
+        tiles.setTileAt(value5, assets.tile`transparency16`)
+    }
+    for (let value52 of tiles.getTilesByType(assets.tile`我的貼圖5`)) {
+        two_fish_icon = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . f 3 3 3 . . . 
+            . . . . . . . . . 3 3 3 3 3 . . 
+            . . . 3 3 f . . . . . . . . . . 
+            . . 3 3 3 3 3 . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . f 3 3 . . . . . 
+            . . . . . . . 3 3 3 3 3 . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . 3 3 f . . . . . . . . . . 
+            . . 3 3 3 3 3 . . . . . . . . . 
+            . . . . . . . . . . . f 3 . . . 
+            . . . . . . . . . . . 3 3 3 . . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.Fish)
+        animation.runImageAnimation(
+        two_fish_icon,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . 4 4 f . . . . . . . . . . 
+            . . 4 4 4 4 4 . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . f 4 4 4 . . . . 
+            . . . . . . . . 4 4 4 4 4 . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 4 4 f . . . . . . . . . . . 
+            . 4 4 4 4 . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . f 4 4 . . . 
+            . . . . . . . . . 4 4 4 4 4 . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . 4 4 f . . . . . . . . . 
+            . . . 4 4 4 4 4 . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . f 4 4 4 . . . . . 
+            . . . . . . . 4 4 4 4 4 . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . 4 4 f . . . . . . . . . . . 
+            . 4 4 4 4 4 . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . f 4 4 . . . . 
+            . . . . . . . . 4 4 4 4 4 . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        1000,
+        true
+        )
+        tiles.placeOnTile(two_fish_icon, value52)
+        tiles.setTileAt(value52, assets.tile`transparency16`)
+    }
+    for (let value of tiles.getTilesByType(assets.tile`我的貼圖3`)) {
+        two_icon = sprites.create(img`
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 f f f f f f f 9 9 9 9 9 9 9 9 
+            9 9 9 9 f 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 f f f f f f 9 9 
+            9 9 9 9 9 9 9 f 9 9 9 f 9 9 f 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 9 
+            `, SpriteKind.Wall)
+        tiles.placeOnTile(two_icon, value)
+        tiles.setTileAt(value, assets.tile`transparency16`)
+    }
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Three_finish, function (sprite, otherSprite) {
+    level_three_win()
 })
-controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    controller.moveSprite(getPlayer, 0, 0)
-    getPlayer.setVelocity(0, 0)
+function game_over_lose () {
+    info.setScore(totalScore + info.score())
+    game.over(false, effects.confetti)
+}
+function level_one_controll () {
+    if (controller.left.isPressed()) {
+        animation.runImageAnimation(
+        getPlayer,
+        [img`
+            ...........4444114..........
+            ..........444444414.........
+            ..........4444444414........
+            .........44444444444........
+            .........55555555555........
+            ........4444444444444.......
+            ........44dfddfdddd.........
+            ..........dfddfdddd.........
+            ..........ddddddddd.........
+            ...........ddddddd..........
+            ...........22222222.........
+            ..........12222222222.......
+            .........122222222222.......
+            ........12222222221222......
+            ......dd22222222212222......
+            ....bbbd2222222dd22222......
+            ......bbbbbbbbbbd222........
+            ...........2222bbbbbb.......
+            ...........fffcffff.bb......
+            ...........22222222..b......
+            ...........22222222.bb......
+            ..........2222.2222bb.......
+            ..........2222.2222b........
+            ..........2222.2222.........
+            ..........2222.2222.........
+            ..........222...2222........
+            ..........222...2222........
+            .........ffff..fffff........
+            `,img`
+            ...........4444114..........
+            ..........444444414.........
+            ..........4444444414........
+            .........44444444444........
+            .........55555555555........
+            ........4444444444444.......
+            ........44dfddfdddd.........
+            ..........dfddfdddd.........
+            ..........ddddddddd.........
+            ...........ddddddd..........
+            ...........22222222.........
+            ..........1222222222........
+            .........122222222222.......
+            ........12222222221222......
+            ......dd22222222212222......
+            ....bbbd22222222122222......
+            ......bbbbbbb22dd222........
+            ...........2bbbdbbbbb.......
+            ...........fffcffff.bb......
+            ...........22222222..b......
+            ...........22222222.bb......
+            ..........2222.2222bb.......
+            ..........2222.2222b........
+            ..........222..2222.........
+            ..........2222..222.........
+            ..........2222..2222........
+            ...........222..2222........
+            ..........ffff.fffff........
+            `],
+        1000,
+        true
+        )
+        playerFace = 1
+    } else if (controller.right.isPressed()) {
+        animation.runImageAnimation(
+        getPlayer,
+        [img`
+            ..........4444114...........
+            .........444444414..........
+            ........4444444441..........
+            ........44444444444.........
+            ........55555555555.........
+            .......4444444444444........
+            .........ddddfddfd44........
+            .........ddddfddfd..........
+            .........ddddddddd..........
+            ..........ddddddd...........
+            .........22222222...........
+            .......22222222221..........
+            .......222222222221.........
+            ......22212222222221........
+            ......22221222222222dd......
+            ......22222dd2222222dbbb....
+            ........222dbbbbbbbbbb......
+            .......bbbbbb2222...........
+            ......bb.ffffcfff...........
+            ......b..22222222...........
+            ......bb.22222222...........
+            .......bb2222.2222..........
+            ........b2222.2222..........
+            .........2222.2222..........
+            .........2222.2222..........
+            ........2222...222..........
+            ........2222...222..........
+            ........fffff..ffff.........
+            `,img`
+            ..........4444114...........
+            .........444444414..........
+            ........4444444441..........
+            ........44444444444.........
+            ........55555555555.........
+            .......4444444444444........
+            .........ddddfddfd44........
+            .........ddddfddfd..........
+            .........ddddddddd..........
+            ..........ddddddd...........
+            .........22222222...........
+            ........2222222221..........
+            .......222222222221.........
+            ......22212222222221........
+            ......22221222222222dd......
+            ......22222dd2222222dbbb....
+            ........222dd22bbbbbbb......
+            .......bbbbbbbbb2...........
+            ......bb.ffffcfff...........
+            ......b..222222222..........
+            ......bb.222222222..........
+            .......bb2222.2222..........
+            ........b2222..222..........
+            .........2222..222..........
+            ........2222..2222..........
+            ........2222..2222..........
+            ........222...2222..........
+            ........ffff..fffff.........
+            `],
+        1000,
+        true
+        )
+        playerFace = 3
+    } else if (controller.down.isPressed()) {
+        animation.runImageAnimation(
+        getPlayer,
+        [img`
+            ............................
+            .........44444..............
+            ........4444414.............
+            .......444444414............
+            ......44444444414...........
+            ......444444444414..........
+            ......455555555444..........
+            .......4444444444...........
+            ........ddfddfdd............
+            ........ddfddfdd............
+            .........dddddd.............
+            ........22dddd2.............
+            .......222222222bb..........
+            .......2222222222b..........
+            ......22212222122b..........
+            ......2221222ddbb...........
+            ......2221222bbd............
+            .......22212bbf2............
+            .......2221bb22.............
+            .......2ddbbcfff............
+            ........ddb22222............
+            .........bb2.222............
+            ........bb22..22............
+            .........222..22............
+            .........222..22............
+            .........ff2.22f............
+            ........ffff.fff............
+            .........ff..ff.............
+            `,img`
+            ............................
+            .........44444..............
+            ........4444414.............
+            .......444444414............
+            ......44444444414...........
+            ......444444444414..........
+            ......455555555444..........
+            .......4444444444...........
+            ........ddfddfdd............
+            ........ddfddfdd............
+            .........dddddd.............
+            ........22dddd2.............
+            .......222222222b...........
+            .......2222222222b..........
+            ......22212222122b..........
+            ......2221222ddbbb..........
+            ......2221222bbd............
+            ......222212bbf2............
+            .......2221bb22.............
+            .......22d2bcfff............
+            ........2ddb2222............
+            .........dd2.222............
+            .........bb2..22............
+            .........b22..22............
+            .........222..22............
+            .........ff2..2f............
+            .........fff..ff............
+            ............................
+            `],
+        1000,
+        true
+        )
+        playerFace = 2
+    } else if (controller.up.isPressed()) {
+        animation.runImageAnimation(
+        getPlayer,
+        [img`
+            ..........b.................
+            ..........b.................
+            .........bbb................
+            .........b444414............
+            .........44444414...........
+            ........444444441...........
+            .......b4444444444..........
+            ......d45444444441..........
+            ......2b4544445544..........
+            ......2bd4555544d...........
+            ......22224444222...........
+            ......222222222222..........
+            .......222222221222.........
+            .......b22222221222.........
+            ........b222222212..........
+            .........2222222............
+            .........2222222............
+            .........bff22ff............
+            ........bb2ffff2............
+            .......bb2222222............
+            ........b222.222............
+            .........222.2222...........
+            .........222.2222...........
+            .........222.2222...........
+            .........22f.2f22...........
+            .........fff.ffff...........
+            .........ff..ff.............
+            ............................
+            `,img`
+            ..........bb................
+            ..........bb................
+            .........bbb................
+            .........b444414............
+            .........44444414...........
+            ........444444441...........
+            ........4444444444..........
+            ......d45444444441..........
+            ......2b4544445544..........
+            ......2bd4555544d...........
+            ......22224444222...........
+            .......22222222222..........
+            .......222222221222.........
+            .......b22222221222.........
+            ........b222222212..........
+            .........22222222...........
+            .........2222222............
+            .........bff22ff............
+            ........bb2ffff2............
+            .......bb2222222............
+            ........b222.2222...........
+            .........222.2222...........
+            .........222.2222...........
+            .........222.2222...........
+            .........22f.2f22...........
+            .........fff.ffff...........
+            .........ff...fff...........
+            ............................
+            `],
+        1000,
+        true
+        )
+        playerFace = 0
+    } else if (controller.B.isPressed()) {
+    	
+    }
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.sea, function (sprite, otherSprite) {
+    game_over_lose()
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Fish, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    info.changeScoreBy(-1)
+    info.changeLifeBy(-1)
+})
+function level_one_hydro () {
     if (playerFace == 0) {
         water = sprites.create(img`
             . . . . . . . . . . . . . . . . 
@@ -604,7 +1315,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         200,
         true
         )
-        pause(800)
+        pause(600)
         water.destroy()
     } else if (playerFace == 1) {
         water = sprites.create(img`
@@ -683,7 +1394,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         200,
         true
         )
-        pause(800)
+        pause(600)
         water.destroy()
     } else if (playerFace == 2) {
         water = sprites.create(img`
@@ -858,7 +1569,7 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         200,
         true
         )
-        pause(800)
+        pause(600)
         water.destroy()
     } else if (playerFace == 3) {
         water = sprites.create(img`
@@ -937,210 +1648,285 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
         200,
         true
         )
-        pause(800)
+        pause(600)
         water.destroy()
     }
     controller.moveSprite(getPlayer, 60, 60)
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Three_Coins, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    info.changeScoreBy(1)
 })
-controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    getPlayer,
-    [img`
-        ..........4444114...........
-        .........444444414..........
-        ........4444444441..........
-        ........44444444444.........
-        ........55555555555.........
-        .......4444444444444........
-        .........ddddfddfd44........
-        .........ddddfddfd..........
-        .........ddddddddd..........
-        ..........ddddddd...........
-        .........22222222...........
-        .......22222222221..........
-        .......222222222221.........
-        ......22212222222221........
-        ......22221222222222dd......
-        ......22222dd2222222dbbb....
-        ........222dbbbbbbbbbb......
-        .......bbbbbb2222...........
-        ......bb.ffffcfff...........
-        ......b..22222222...........
-        ......bb.22222222...........
-        .......bb2222.2222..........
-        ........b2222.2222..........
-        .........2222.2222..........
-        .........2222.2222..........
-        ........2222...222..........
-        ........2222...222..........
-        ........fffff..ffff.........
-        `,img`
-        ..........4444114...........
-        .........444444414..........
-        ........4444444441..........
-        ........44444444444.........
-        ........55555555555.........
-        .......4444444444444........
-        .........ddddfddfd44........
-        .........ddddfddfd..........
-        .........ddddddddd..........
-        ..........ddddddd...........
-        .........22222222...........
-        ........2222222221..........
-        .......222222222221.........
-        ......22212222222221........
-        ......22221222222222dd......
-        ......22222dd2222222dbbb....
-        ........222dd22bbbbbbb......
-        .......bbbbbbbbb2...........
-        ......bb.ffffcfff...........
-        ......b..222222222..........
-        ......bb.222222222..........
-        .......bb2222.2222..........
-        ........b2222..222..........
-        .........2222..222..........
-        ........2222..2222..........
-        ........2222..2222..........
-        ........222...2222..........
-        ........ffff..fffff.........
-        `],
-    1000,
-    true
-    )
-    playerFace = 3
+info.onCountdownEnd(function () {
+    if (currentLevel == 1) {
+        level_one_win()
+    } else {
+    	
+    }
+})
+function level_one_win () {
+    controller.moveSprite(getPlayer, 0, 0)
+    getPlayer.startEffect(effects.spray, 500)
+    getPlayer.sayText("即將進入下一關!", 500, false)
+    currentLevel = 2
+    totalScore = info.score()
+    info.setScore(0)
+    getPlayer.destroy()
+    pause(2000)
+    getPlayer.destroy()
+    newLevel()
+    for (let value of sprites.allOfKind(SpriteKind.Tree)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.Fire)) {
+        value.destroy()
+    }
+}
+function init_one () {
+    tiles.setCurrentTilemap(tilemap`層級2`)
+    treeList = tiles.getTilesByType(sprites.castle.tileGrass2)
+    for (let value6 of tiles.getTilesByType(sprites.castle.tileGrass2)) {
+        tree_icon = sprites.create(img`
+            ......7777717.......
+            .....77777777717....
+            ....7477747747777...
+            ..7777477744777717..
+            .74474774447777777..
+            .774477774777444777.
+            .777447744444477777.
+            .77774474477777777..
+            ..77474447777447....
+            ..77777447774777....
+            ...7777444747777....
+            ....777744447.......
+            ....77774447........
+            .....77.4444........
+            ........4444........
+            ........4444........
+            .......44444........
+            .......444444.......
+            .......444444.......
+            ........44444.......
+            `, SpriteKind.Tree)
+        tiles.placeOnTile(tree_icon, value6)
+        tiles.setTileAt(value6, assets.tile`transparency16`)
+    }
+    for (let value7 of tiles.getTilesByType(sprites.castle.tilePath3)) {
+        tree_icon = sprites.create(img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . 1 . 
+            . . . . 6 6 . . . . . . 1 1 . . 
+            . . . . 1 7 6 . . . . 1 7 6 . . 
+            . . . 1 7 7 7 6 . . 1 7 7 6 . . 
+            . . 6 7 6 6 7 7 6 1 7 7 6 . . . 
+            . . 6 6 . . 6 7 6 7 7 6 . . . . 
+            . . . . . . 6 7 7 7 6 . . . . . 
+            . . . . . . 6 7 7 6 . . . . . . 
+            . . . . . . . 7 7 6 . . . . . . 
+            . . . . . . . 6 6 . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `, SpriteKind.Tree)
+        tiles.placeOnTile(tree_icon, value7)
+        tiles.setTileAt(value7, assets.tile`transparency16`)
+    }
+}
+function level_three_controll () {
+    if (controller.A.isPressed() && getPlayer.vy == 0) {
+        getPlayer.vy = -180
+    } else {
+        getPlayer.ay = 300
+    }
+}
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (currentLevel == 1) {
+        controller.moveSprite(getPlayer, 0, 0)
+        getPlayer.setVelocity(0, 0)
+        level_one_hydro()
+    }
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.TwoSky, function (sprite, otherSprite) {
+    level_two_win()
+})
+function level_two_win () {
+    controller.moveSprite(getPlayer, 0, 0)
+    getPlayer.setVelocity(0, 0)
+    getPlayer.startEffect(effects.spray, 500)
+    currentLevel = 3
+    totalScore = info.score()
+    info.setScore(0)
+    pause(2000)
+    getPlayer.destroy()
+    newLevel()
+    for (let value of sprites.allOfKind(SpriteKind.TwoSky)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.trash)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.Wall)) {
+        value.destroy()
+    }
+    for (let value of sprites.allOfKind(SpriteKind.Fish)) {
+        value.destroy()
+    }
+}
+info.onLifeZero(function () {
+    game_over_lose()
 })
 sprites.onOverlap(SpriteKind.Water, SpriteKind.Fire, function (sprite, otherSprite) {
     otherSprite.destroy()
     music.baDing.play()
     info.setScore(info.score() + 1)
 })
-function newLevel () {
-    if (currentLevel == 1) {
-        level_one()
-    } else if (currentLevel == 2) {
-        levelTwo()
-    } else if (currentLevel == 3) {
-        levelThree()
+function level_two_controll () {
+    if (controller.left.isPressed()) {
+        animation.runImageAnimation(
+        getPlayer,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 5 5 5 5 . . . . 
+            . . . . . . f 5 5 5 5 5 5 5 . . 
+            . . . . . 5 5 5 5 5 5 5 5 5 5 . 
+            . . . . f 5 5 5 5 5 5 5 5 5 5 . 
+            . . . 5 5 5 5 5 5 5 5 5 . . 5 . 
+            . . . 5 5 5 5 5 5 5 5 . . . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 . . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+            . . 5 5 5 5 5 5 . 5 5 5 5 5 . . 
+            . . . 5 5 5 5 . . . 5 5 5 5 . . 
+            . . . 5 5 5 5 . . . . 5 5 . . . 
+            . . . . 5 5 5 . . . . . . . . . 
+            . . . . . 5 5 5 . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . 5 5 5 5 5 5 . . . 
+            . . . . . . f 5 5 5 5 5 5 5 5 . 
+            . . . . . 5 5 5 5 5 5 5 5 5 5 . 
+            . . . . f 5 5 5 5 5 5 5 5 5 5 . 
+            . . . 5 5 5 5 5 5 5 5 5 . . 5 . 
+            . . . 5 5 5 5 5 5 5 5 . . . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 . . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . . 5 5 5 5 5 . . 5 5 5 5 . . 
+            . . . 5 5 5 5 5 . . . 5 5 5 . . 
+            . . . . 5 5 5 5 . . . . 5 . . . 
+            . . . . . 5 5 5 . . . . . . . . 
+            . . . . . . 5 5 5 . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        1000,
+        true
+        )
+    } else if (controller.right.isPressed()) {
+        animation.runImageAnimation(
+        getPlayer,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . 5 5 5 5 5 . . . . . . . 
+            . . 5 5 5 5 5 5 5 f . . . . . . 
+            . 5 5 5 5 5 5 5 5 5 5 . . . . . 
+            . 5 5 5 5 5 5 5 5 5 5 f . . . . 
+            . 5 . . 5 5 5 5 5 5 5 5 5 . . . 
+            . . . . . 5 5 5 5 5 5 5 5 . . . 
+            . . . . 5 5 5 5 5 5 5 5 5 5 . . 
+            . . . 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . . 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . 5 5 5 5 5 . 5 5 5 5 5 5 . . 
+            . . 5 5 5 5 . . . 5 5 5 5 . . . 
+            . . . 5 5 . . . . 5 5 5 5 . . . 
+            . . . . . . . . . 5 5 5 . . . . 
+            . . . . . . . . 5 5 5 . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . 5 5 5 5 5 5 . . . . . . . 
+            . 5 5 5 5 5 5 5 5 f . . . . . . 
+            . 5 5 5 5 5 5 5 5 5 5 . . . . . 
+            . 5 5 5 5 5 5 5 5 5 5 f . . . . 
+            . 5 . . 5 5 5 5 5 5 5 5 5 . . . 
+            . . . . . 5 5 5 5 5 5 5 5 . . . 
+            . . . . 5 5 5 5 5 5 5 5 5 5 . . 
+            . . . 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . 5 5 5 5 . . 5 5 5 5 5 . . . 
+            . . 5 5 5 . . . 5 5 5 5 5 . . . 
+            . . . 5 . . . . 5 5 5 5 . . . . 
+            . . . . . . . . 5 5 5 . . . . . 
+            . . . . . . . 5 5 5 . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        1000,
+        true
+        )
     } else {
-        info.setScore(totalScore)
-        game.over(true, effects.confetti)
+        animation.runImageAnimation(
+        getPlayer,
+        [img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . 5 f 5 5 f 5 . . . . . 
+            . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 . . 5 5 5 5 5 5 . . 5 5 . 
+            . 5 . . . . 5 5 5 5 . . . . 5 . 
+            . . . . . . 5 5 5 5 . . . . . . 
+            . . . . . . 5 5 5 . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . 5 f 5 5 f 5 . . . . . 
+            . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 . . 5 5 5 5 5 5 . . 5 5 . 
+            . 5 . . . . 5 5 5 5 5 . . . 5 . 
+            . . . . . . 5 5 5 5 . . . . . . 
+            . . . . . . 5 5 5 5 . . . . . . 
+            . . . . . . . 5 5 . . . . . . . 
+            . . . . . . . . 5 . . . . . . . 
+            `,img`
+            . . . . . . . . . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            . . . . . 5 f 5 5 f 5 . . . . . 
+            . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 5 . 5 5 5 5 5 5 5 5 5 5 . 
+            . 5 5 . . 5 5 5 5 5 5 . 5 5 5 . 
+            . 5 . . . . 5 5 5 5 . . . 5 5 . 
+            . . . . . . 5 5 5 5 . . . . 5 . 
+            . . . . . . 5 5 5 . . . . . . . 
+            . . . . . . . 5 . . . . . . . . 
+            . . . . . . . . . . . . . . . . 
+            `],
+        1000,
+        true
+        )
     }
 }
-controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
-    animation.runImageAnimation(
-    getPlayer,
-    [img`
-        ............................
-        .........44444..............
-        ........4444414.............
-        .......444444414............
-        ......44444444414...........
-        ......444444444414..........
-        ......455555555444..........
-        .......4444444444...........
-        ........ddfddfdd............
-        ........ddfddfdd............
-        .........dddddd.............
-        ........22dddd2.............
-        .......222222222bb..........
-        .......2222222222b..........
-        ......22212222122b..........
-        ......2221222ddbb...........
-        ......2221222bbd............
-        .......22212bbf2............
-        .......2221bb22.............
-        .......2ddbbcfff............
-        ........ddb22222............
-        .........bb2.222............
-        ........bb22..22............
-        .........222..22............
-        .........222..22............
-        .........ff2.22f............
-        .........fff.fff............
-        ............................
-        `,img`
-        ............................
-        .........44444..............
-        ........4444414.............
-        .......444444414............
-        ......44444444414...........
-        ......444444444414..........
-        ......455555555444..........
-        .......4444444444...........
-        ........ddfddfdd............
-        ........ddfddfdd............
-        .........dddddd.............
-        ........22dddd2.............
-        .......222222222b...........
-        .......2222222222b..........
-        ......22212222122b..........
-        ......2221222ddbbb..........
-        ......2221222bbd............
-        ......222212bbf2............
-        .......2221bb22.............
-        .......22d2bcfff............
-        ........2ddb2222............
-        .........dd2.222............
-        .........bb2..22............
-        .........b22..22............
-        .........222..22............
-        .........ff2..2f............
-        .........fff..ff............
-        ............................
-        `],
-    1000,
-    true
-    )
-    playerFace = 2
-})
-function levelTwo () {
-    mySprite = sprites.create(img`
-        ............................
-        ............................
-        ..........444444............
-        ........4444444444..........
-        .......444444444444.........
-        .......444444444444.........
-        .......444444444444.........
-        .......444444444444.........
-        .......444444444444.........
-        .....4444444444444444.......
-        .......dddddddddddd.........
-        .......dddfddddfddd.........
-        .......dddddddddddd.........
-        ........dddddddddd..........
-        ..........ddddddd...........
-        .........22ddddd22..........
-        ........22222222222.........
-        .......2222222222222........
-        .......2222222222222........
-        .......2222222222222........
-        .......2222222222222........
-        ......dddfffffffffddd.......
-        .........222222222..........
-        .........222...222..........
-        ........2222...2222.........
-        .......22222...22222........
-        ............................
-        ............................
-        `, SpriteKind.Player)
-    controller.player2.moveSprite(mySprite)
-}
-let fire_random: tiles.Location = null
-let fire: Sprite = null
-let mySprite: Sprite = null
-let water: Sprite = null
-let tree_icon: Sprite = null
-let treeList: tiles.Location[] = []
-let playerFace = 0
-let getPlayer: Sprite = null
-let totalScore = 0
-let currentLevel = 0
-currentLevel = 1
-totalScore = 0
-newLevel()
-game.onUpdateInterval(4000, function () {
-    fire = sprites.create(img`
+function level_one_summonFire () {
+    level_one_fire = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . 2 . . . . . 
         . . 2 . . . . . . 2 2 2 . . . . 
@@ -1158,10 +1944,9 @@ game.onUpdateInterval(4000, function () {
         2 2 4 4 5 5 5 5 5 5 5 4 2 2 . . 
         2 2 4 5 5 5 5 5 5 5 5 4 4 2 . . 
         `, SpriteKind.Fire)
-    fire_random = treeList[randint(0, treeList.length - 1)]
-    tiles.placeOnTile(fire, fire_random)
+    tiles.placeOnTile(level_one_fire, treeList[randint(0, treeList.length - 1)])
     animation.runImageAnimation(
-    fire,
+    level_one_fire,
     [img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -1178,7 +1963,7 @@ game.onUpdateInterval(4000, function () {
         . . . 2 . 2 4 4 5 4 2 . . . . . 
         . . . . . 4 4 5 5 5 4 . . . . . 
         . . . . 2 4 5 5 5 5 4 2 . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . . 2 4 5 5 4 2 . . . . . 
         `,img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -1217,4 +2002,278 @@ game.onUpdateInterval(4000, function () {
     500,
     true
     )
+}
+sprites.onOverlap(SpriteKind.Player, SpriteKind.trash, function (sprite, otherSprite) {
+    otherSprite.destroy()
+    info.changeScoreBy(1)
+})
+function newLevel () {
+    if (currentLevel == 1) {
+        level_one()
+    } else if (currentLevel == 2) {
+        levelTwo()
+    } else if (currentLevel == 3) {
+        levelThree()
+    } else {
+        game_over_win()
+    }
+}
+function game_over_win () {
+    info.setScore(totalScore)
+    game.over(true, effects.confetti)
+}
+function levelTwo () {
+    scene.setBackgroundColor(8)
+    scene.setBackgroundImage(img`
+        cccccccccccccccccccccccccccccccccccccccccccc......................................................ccccccccc....ccccccccccccccccccccccccccccccccccccccccccccccccc
+        ccccccccccccccccccccccccccccc.ccccccccccc.................................................................cccccccccccccccccccccccccccccccccccccccccccccccccccccc
+        cccccccccccccccccccccccccc.cccccccccccccc.........................................................................cccccc.ccccccccccccccccccccccccccccccccccccccc
+        cccccccccccccccccccccccc.ccccccccccc....c..............................................................................ccccc.ccccccccccccccccccccccccccccccccccc
+        ccccccccccccccccccccccccccccccccc..........................................................................................ccccccccccccccccccccccccccccccccccccc
+        ccccccccccccccccccccccccccccccc..................................................................................c..............cccccccccccccccccccccccccccccccc
+        cccccccccccccccccccccccccccc...........................................................................................c........c.cccccccccccccccccccccccccccccc
+        cccccccccccccccccccccccccc.........................................................................................................ccccccccccccccccccccccccccccc
+        cccccccccccccccccccccccc.......................................................................................................c....cc.ccccccccccccccccccccccccc
+        ccccccccccccccccccccccc...............................................................................................c...............cccccccccccccccccccccccccc
+        ccccccccccccccccccccccc...c............................................................................................................ccccccccccccccccccccccccc
+        ccccccccc.cccccccccccc..................................................................................................................cccccccccccccccccccccccc
+        ccccccccccccccccccccc....................................................................................................................ccccccccccccccccccccccc
+        ccccccccccc.ccccccc.........................c..........................................................................................c.ccccccccccccccccccccccc
+        cccccccccccccc.ccc.................................................................................................................c......cccccccccccccccccccccc
+        cccccccccccccccc..........c................................................................................................................ccccccccccccccccccccc
+        ccccccccccccccc.....c.......................................................................................................c.............c.cccccccccccccccccccc
+        ccccccccccccc................................................................................................................................ccccccccccccccccccc
+        cccccccccccc...c........................................................................................................................c.....cccccccccccccccccc
+        ccccccccccc....................................................................................................................................ccccccccccccccccc
+        cccccccccccc.....................................................................................................................c............c.cccccccccccccccc
+        ccccccccccc.....................................................................................................................................cccccccccccccccc
+        cccccccccc........................................................................................................................................cccccccccccccc
+        cccccccccc...........................................................................................................c............................cccccccccccccc
+        ccccccccc.................................................................................................................................c..c..c..ccccccccccccc
+        cccccccccc..........................................................................................................................................cccccccccccc
+        cccccccc............................................................................................................................................cccccccccccc
+        ccccccc....................................................................................................................................c....c...cccccccccccc
+        ccccccc.......................................................................................................................c.....................cccccccccccc
+        ccccccc....c..................................................................................................................................c.......cccccccccc
+        ccccccc................................................................................................................................................ccccccccc
+        ccccccc................................................................................................................................................ccccccccc
+        ccccccc................................................................................................................................................ccccccccc
+        ccccccc..............................................................................................................................c..................cccccccc
+        ccccccc....................................c............................................................................................................cccccccc
+        ccccccc..................................................................................................................................................c.ccccc
+        cccccc.......c...........................................................................................................................................c.ccccc
+        cccccc.........................................................................................................................................c.........ccccccc
+        ccccc.c...............................................................................................................................................c...cccccc
+        ccccc...............................................................................................................................c.....................cccccc
+        cccc......................................................................................................................................................c.cccc
+        cccc....c................................................................................................................................................c.ccccc
+        cccc.......................................................................................................................................................ccccc
+        cccc.......................................................................................................................................................ccccc
+        cccc...................................................................................................................................................c....cccc
+        cccc...................................................................................................................................................c....cccc
+        ccccc..........................................................................................................c............................................cccc
+        cccc......................c.................................................................................................................................cccc
+        ccc..c....................................................................................................................................................c.cccc
+        ccc.........................................................................................................................................................cccc
+        ccc.........................................................................................................................................................cccc
+        ccc..........................................................................................................................................................ccc
+        cc...c.......................................................................................................................................................ccc
+        cc.c....c...........................................................................................................................................c........ccc
+        cc...........................................................................................................................................................ccc
+        cc...........................................................................................................................................................ccc
+        cc...........................................................................................................................................................ccc
+        cc...........................................................................................................................................................ccc
+        cc...........................................................................................................................................................ccc
+        cc...........................................................................................................................................................ccc
+        cc...........................................................................................................................c...............................ccc
+        cc...........................................................................................................................................................ccc
+        cc....c.....................................................................................................................................................cccc
+        ccc..........................................................................................................................................................ccc
+        ccc..........................................................................................................................................................ccc
+        ccc..........c...............................................................................................................................................ccc
+        ccc..........................................................................................................................................................ccc
+        ccc..........................................................................................................................................................ccc
+        ccc.c........................................................................................................................................................ccc
+        ccc.......................................................................................................................................................c..ccc
+        ccc..c....................................c..................................................................................................................ccc
+        ccc..........................................................................................................................................................ccc
+        ccc............c.............................................................................................................................................ccc
+        cccc.........................................................................................................................................................ccc
+        cccc.....................................................................................................................................c.............c.....ccc
+        ccccc...c....................................................................................................................................................ccc
+        ccc...........................................................................................................................................................cc
+        ccc..........................................................................................................................................................ccc
+        ccc..........................................................................................................................................................ccc
+        ccc..c.....c................................................................................................................................................cccc
+        ccc.....................................................................................................................................................c....ccc
+        ccc..........................................................................................................................................................ccc
+        ccc..........................................................................................................................................................ccc
+        ccccc........................................................................................................................................................ccc
+        ccccc........................................................................................................................................................ccc
+        cccccc.......................................................................................................................................................ccc
+        cccccc............................c..........................................................................................................................ccc
+        cccccccc.....................................................................................................................................................ccc
+        cccccc......................................................................................................................................................cccc
+        cccccc..c.................................................................................................................................................c.cccc
+        cccccc...............................................................................................................................................c......cccc
+        cccccc......................................................................................................................................................cccc
+        ccccccc..........c..........................................................................................................................................cccc
+        ccccccc.....................................................................................................................................................cccc
+        ccccccc..c.................................................................................................................c...............................ccccc
+        ccccccc..............................................................................................................................................c.....ccccc
+        ccccccc...................................................................................................................................................cccccc
+        cccccccc..................................................................................................................................................cccccc
+        cccccccc..................................................................................................................................................cccccc
+        cccccccc.c....c.................................................................................................................................c........ccccccc
+        ccccccccc...............................................................................................................................................cccccccc
+        cccccccccc.....................................c....................................................................................................c...cccccccc
+        cccccccccc.............................................................................................................................................ccccccccc
+        ccccccccccc...........................................................................................................................................cccccccccc
+        ccccccccccc.c...c.....................................................................................................................................cccccccccc
+        ccccccccccc.c.................c......................................................................................................................ccccccccccc
+        cccccccccccc........................................................................................................................................cccccccccccc
+        ccccccccccccc.c.....................................................................................................................................cccccccccccc
+        cccccccccccccc...c......................................................................................................................c..........ccccccccccccc
+        ccccccccccccccc...............................................................................................................................c...cccccccccccccc
+        cccccccccccccccccc................................................................................................................................cccccccccccccc
+        ccccccccccccccccccc..............................................................................................................................ccccccccccccccc
+        cccccccccccccccccccc..c........................................................................................................................ccccccccccccccccc
+        ccccccccccccccccccccc........................................................................................................................ccccccccccccccccccc
+        ccccccccccccccccccccccc..............................................................................................................c....cccccccccccccccccccccc
+        cccccccccccccccccccccccccc..............................................................................................................cccccccccccccccccccccccc
+        cccccccccccccccccccccccccccccc...................................................................................c....................cccccccccccccccccccccccccc
+        cccccccccccccccccccccccccccccccccc.........................................................................................c.......ccccccccccccccccccccccccccccc
+        ccccccccccccccccccccccccccccccccccccc...........................................................................................cccccccccccccccccccccccccccccccc
+        cccccccccccccccccccccccccccccccccccccccccc...................................................................................ccccccccccccccccccccccccccccccccccc
+        `)
+    info.setLife(5)
+    getPlayer = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . 4 4 4 4 4 5 4 . . . . . 
+        . . . . 4 5 5 5 5 5 4 . . . . . 
+        . . . . 4 5 f 5 f 5 4 . . . . . 
+        . . . . 4 5 f 5 f 5 4 . . . . . 
+        . . . . 4 5 5 5 5 5 4 . . . . . 
+        . . . . 4 5 5 5 5 5 4 . . . . . 
+        . . . . 4 5 5 5 5 5 4 . . . . . 
+        . . . . 4 5 5 5 5 5 4 . . . . . 
+        . . . . 4 5 5 5 5 5 4 . . . . . 
+        . . . . 4 4 4 4 5 4 4 . . . . . 
+        . . . . . 4 5 4 . 4 . . . . . . 
+        . . . . . 4 5 4 . 4 . . . . . . 
+        . . . . . 4 5 4 . 4 . . . . . . 
+        . . . . 4 4 5 4 . 4 . . . . . . 
+        . . . 4 4 . 5 4 . 4 4 . . . . . 
+        `, SpriteKind.Player)
+    animation.runImageAnimation(
+    getPlayer,
+    [img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . 5 f 5 5 f 5 . . . . . 
+        . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+        . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+        . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 . . 5 5 5 5 5 5 . . 5 5 . 
+        . 5 . . . . 5 5 5 5 . . . . 5 . 
+        . . . . . . 5 5 5 5 . . . . . . 
+        . . . . . . 5 5 5 . . . . . . . 
+        . . . . . . . 5 . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . 5 f 5 5 f 5 . . . . . 
+        . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+        . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+        . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 . . 5 5 5 5 5 5 . . 5 5 . 
+        . 5 . . . . 5 5 5 5 5 . . . 5 . 
+        . . . . . . 5 5 5 5 . . . . . . 
+        . . . . . . 5 5 5 5 . . . . . . 
+        . . . . . . . 5 5 . . . . . . . 
+        . . . . . . . . 5 . . . . . . . 
+        `,img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . 5 f 5 5 f 5 . . . . . 
+        . . . 5 5 5 5 5 5 5 5 5 5 . . . 
+        . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+        . . 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 5 . 5 5 5 5 5 5 5 5 5 5 . 
+        . 5 5 . . 5 5 5 5 5 5 . 5 5 5 . 
+        . 5 . . . . 5 5 5 5 . . . 5 5 . 
+        . . . . . . 5 5 5 5 . . . . 5 . 
+        . . . . . . 5 5 5 . . . . . . . 
+        . . . . . . . 5 . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `],
+    1000,
+    true
+    )
+    controller.moveSprite(getPlayer, 61, 0)
+    getPlayer.vy = -50
+    getPlayer.sayText("吃掉垃圾 不要吃魚", 3000, true)
+    scene.cameraFollowSprite(getPlayer)
+    init_two()
+}
+let three_land_break: Sprite = null
+let i = 0
+let level_one_fire: Sprite = null
+let tree_icon: Sprite = null
+let treeList: tiles.Location[] = []
+let water: Sprite = null
+let two_fish_icon: Sprite = null
+let two_icon: Sprite = null
+let three_sea: Sprite = null
+let three_coins: Sprite = null
+let three_temp_list: tiles.Location[] = []
+let three_land_list: Sprite[] = []
+let three_icon: Sprite = null
+let playerFace = 0
+let getPlayer: Sprite = null
+let totalScore = 0
+let currentLevel = 0
+currentLevel = 1
+totalScore = 0
+newLevel()
+game.onUpdate(function () {
+    if (currentLevel == 1) {
+        level_one_controll()
+    } else if (currentLevel == 2) {
+        level_two_controll()
+    } else if (currentLevel == 3) {
+        level_three_controll()
+    } else {
+    	
+    }
+})
+game.onUpdateInterval(1700, function () {
+    if (currentLevel == 1) {
+        level_one_summonFire()
+    } else if (currentLevel == 3 && i == 2) {
+        three_land_break = three_land_list[randint(0, three_land_list.length - 1)]
+        three_land_break.destroy()
+        tiles.setWallAt(three_land_break.tilemapLocation(), false)
+        i = 0
+    } else {
+    	
+    }
+    i += 1
+})
+game.onUpdateInterval(100, function () {
+    if (currentLevel == 2) {
+        getPlayer.vy = -50
+    }
 })
